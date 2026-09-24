@@ -1,0 +1,185 @@
+.learning-section {
+    display: none;
+    flex-direction: column;
+    gap: 24px;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.learning-section.active {
+    display: flex;
+}
+
+.page-header-text {
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+}
+
+.section-header-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 16px;
+}
+
+.section-category-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.01em;
+}
+
+/* Search Bar Styling */
+.search-bar-container {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 12px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-md);
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    font-size: 1.15rem;
+    color: var(--text-light);
+}
+
+.search-input {
+    width: 100%;
+    font-family: var(--font-family);
+    font-size: 1.05rem;
+    padding: 14px 20px 14px 50px;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--border);
+    outline: none;
+    background-color: rgba(244, 246, 242, 0.78);
+    transition: var(--transition);
+}
+
+@media (max-width: 767px) {
+    .search-input {
+        font-size: 0.95rem;
+        padding: 13px 14px 13px 46px;
+    }
+
+    .search-icon {
+        left: 16px;
+    }
+}
+
+.search-input:focus {
+    border-color: var(--primary);
+    background-color: var(--surface);
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+/* Dynamic Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background-color: var(--surface);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    padding: 24px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 160px; /* Static height instead of aspect-ratio is more readable */
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    isolation: isolate;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: var(--shadow-md);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+}
+
+.card-meta {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Loader custom margins */
+.cards-grid .loading-spinner {
+    grid-column: 1 / -1;
+    margin: 60px auto;
+}
+
+/* ============================================
+   Lesson Title — Tagalog Subtitle Styling
+   ============================================ */
+.card-title .title-tagalog {
+    font-size: 0.75em;
+    color: var(--text-light);
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0;
+}
+
+@media (max-width: 600px) {
+    .card-title .title-tagalog {
+        font-size: 0.7em;
+    }
+}

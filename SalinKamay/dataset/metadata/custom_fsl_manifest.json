@@ -1,0 +1,882 @@
+[
+  {
+    "category": "Animals",
+    "sign": "Bird",
+    "label": "BIRD",
+    "class_idx": 2,
+    "video": "bird_01.mp4",
+    "rel_path": "custom_fsl/Animals/Bird/bird_01.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Bird",
+    "label": "BIRD",
+    "class_idx": 2,
+    "video": "bird_02.mp4",
+    "rel_path": "custom_fsl/Animals/Bird/bird_02.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Bird",
+    "label": "BIRD",
+    "class_idx": 2,
+    "video": "bird_03.mp4",
+    "rel_path": "custom_fsl/Animals/Bird/bird_03.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Cat",
+    "label": "CAT",
+    "class_idx": 3,
+    "video": "cat_01.mp4",
+    "rel_path": "custom_fsl/Animals/Cat/cat_01.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Cat",
+    "label": "CAT",
+    "class_idx": 3,
+    "video": "cat_02.mp4",
+    "rel_path": "custom_fsl/Animals/Cat/cat_02.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Cat",
+    "label": "CAT",
+    "class_idx": 3,
+    "video": "cat_03.mp4",
+    "rel_path": "custom_fsl/Animals/Cat/cat_03.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Dog",
+    "label": "DOG",
+    "class_idx": 9,
+    "video": "dog_01.mp4",
+    "rel_path": "custom_fsl/Animals/Dog/dog_01.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Dog",
+    "label": "DOG",
+    "class_idx": 9,
+    "video": "dog_02.mp4",
+    "rel_path": "custom_fsl/Animals/Dog/dog_02.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Dog",
+    "label": "DOG",
+    "class_idx": 9,
+    "video": "dog_03.mp4",
+    "rel_path": "custom_fsl/Animals/Dog/dog_03.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Horse",
+    "label": "HORSE",
+    "class_idx": 17,
+    "video": "horse_01.mp4",
+    "rel_path": "custom_fsl/Animals/Horse/horse_01.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Horse",
+    "label": "HORSE",
+    "class_idx": 17,
+    "video": "horse_02.mp4",
+    "rel_path": "custom_fsl/Animals/Horse/horse_02.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Horse",
+    "label": "HORSE",
+    "class_idx": 17,
+    "video": "horse_03.mp4",
+    "rel_path": "custom_fsl/Animals/Horse/horse_03.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Pig",
+    "label": "PIG",
+    "class_idx": 23,
+    "video": "pig_01.mp4",
+    "rel_path": "custom_fsl/Animals/Pig/pig_01.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Pig",
+    "label": "PIG",
+    "class_idx": 23,
+    "video": "pig_02.mp4",
+    "rel_path": "custom_fsl/Animals/Pig/pig_02.mp4"
+  },
+  {
+    "category": "Animals",
+    "sign": "Pig",
+    "label": "PIG",
+    "class_idx": 23,
+    "video": "pig_03.mp4",
+    "rel_path": "custom_fsl/Animals/Pig/pig_03.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Ears",
+    "label": "EARS",
+    "class_idx": 10,
+    "video": "Ear_02.mp4",
+    "rel_path": "custom_fsl/Body Parts/Ears/Ear_02.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Ears",
+    "label": "EARS",
+    "class_idx": 10,
+    "video": "Ear_03.mp4",
+    "rel_path": "custom_fsl/Body Parts/Ears/Ear_03.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Ears",
+    "label": "EARS",
+    "class_idx": 10,
+    "video": "Ears_01.mp4",
+    "rel_path": "custom_fsl/Body Parts/Ears/Ears_01.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Eyes",
+    "label": "EYES",
+    "class_idx": 12,
+    "video": "Eye_03.mp4",
+    "rel_path": "custom_fsl/Body Parts/Eyes/Eye_03.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Eyes",
+    "label": "EYES",
+    "class_idx": 12,
+    "video": "Eyes_01.mp4",
+    "rel_path": "custom_fsl/Body Parts/Eyes/Eyes_01.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Eyes",
+    "label": "EYES",
+    "class_idx": 12,
+    "video": "Eyes_02.mp4",
+    "rel_path": "custom_fsl/Body Parts/Eyes/Eyes_02.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Hair",
+    "label": "HAIR",
+    "class_idx": 14,
+    "video": "Hair_01.mp4",
+    "rel_path": "custom_fsl/Body Parts/Hair/Hair_01.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Hair",
+    "label": "HAIR",
+    "class_idx": 14,
+    "video": "Hair_02.mp4",
+    "rel_path": "custom_fsl/Body Parts/Hair/Hair_02.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Hair",
+    "label": "HAIR",
+    "class_idx": 14,
+    "video": "Hair_03.mp4",
+    "rel_path": "custom_fsl/Body Parts/Hair/Hair_03.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Hand",
+    "label": "HAND",
+    "class_idx": 15,
+    "video": "Hand_01.mp4",
+    "rel_path": "custom_fsl/Body Parts/Hand/Hand_01.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Hand",
+    "label": "HAND",
+    "class_idx": 15,
+    "video": "Hand_02.mp4",
+    "rel_path": "custom_fsl/Body Parts/Hand/Hand_02.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Hand",
+    "label": "HAND",
+    "class_idx": 15,
+    "video": "Hand_03.mp4",
+    "rel_path": "custom_fsl/Body Parts/Hand/Hand_03.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Mouth",
+    "label": "MOUTH",
+    "class_idx": 19,
+    "video": "Mouth_01.mp4",
+    "rel_path": "custom_fsl/Body Parts/Mouth/Mouth_01.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Mouth",
+    "label": "MOUTH",
+    "class_idx": 19,
+    "video": "Mouth_02.mp4",
+    "rel_path": "custom_fsl/Body Parts/Mouth/Mouth_02.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Mouth",
+    "label": "MOUTH",
+    "class_idx": 19,
+    "video": "Mouth_03.mp4",
+    "rel_path": "custom_fsl/Body Parts/Mouth/Mouth_03.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Nose",
+    "label": "NOSE",
+    "class_idx": 20,
+    "video": "Nose_01.mp4",
+    "rel_path": "custom_fsl/Body Parts/Nose/Nose_01.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Nose",
+    "label": "NOSE",
+    "class_idx": 20,
+    "video": "Nose_02.mp4",
+    "rel_path": "custom_fsl/Body Parts/Nose/Nose_02.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Nose",
+    "label": "NOSE",
+    "class_idx": 20,
+    "video": "Nose_03.mp4",
+    "rel_path": "custom_fsl/Body Parts/Nose/Nose_03.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Teeth",
+    "label": "TEETH",
+    "class_idx": 34,
+    "video": "Teeth_01.mp4",
+    "rel_path": "custom_fsl/Body Parts/Teeth/Teeth_01.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Teeth",
+    "label": "TEETH",
+    "class_idx": 34,
+    "video": "Teeth_02.mp4",
+    "rel_path": "custom_fsl/Body Parts/Teeth/Teeth_02.mp4"
+  },
+  {
+    "category": "Body Parts",
+    "sign": "Teeth",
+    "label": "TEETH",
+    "class_idx": 34,
+    "video": "Teeth_03.mp4",
+    "rel_path": "custom_fsl/Body Parts/Teeth/Teeth_03.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Angry",
+    "label": "ANGRY",
+    "class_idx": 0,
+    "video": "angry_01.mp4",
+    "rel_path": "custom_fsl/Emotion/Angry/angry_01.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Angry",
+    "label": "ANGRY",
+    "class_idx": 0,
+    "video": "angry_02.mp4",
+    "rel_path": "custom_fsl/Emotion/Angry/angry_02.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Angry",
+    "label": "ANGRY",
+    "class_idx": 0,
+    "video": "angry_03.mp4",
+    "rel_path": "custom_fsl/Emotion/Angry/angry_03.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Happy",
+    "label": "HAPPY",
+    "class_idx": 16,
+    "video": "happy_01.mp4",
+    "rel_path": "custom_fsl/Emotion/Happy/happy_01.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Happy",
+    "label": "HAPPY",
+    "class_idx": 16,
+    "video": "happy_02.mp4",
+    "rel_path": "custom_fsl/Emotion/Happy/happy_02.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Happy",
+    "label": "HAPPY",
+    "class_idx": 16,
+    "video": "happy_03.mp4",
+    "rel_path": "custom_fsl/Emotion/Happy/happy_03.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Sad",
+    "label": "SAD",
+    "class_idx": 30,
+    "video": "sad_01.mp4",
+    "rel_path": "custom_fsl/Emotion/Sad/sad_01.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Sad",
+    "label": "SAD",
+    "class_idx": 30,
+    "video": "sad_02.mp4",
+    "rel_path": "custom_fsl/Emotion/Sad/sad_02.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Sad",
+    "label": "SAD",
+    "class_idx": 30,
+    "video": "sad_03.mp4",
+    "rel_path": "custom_fsl/Emotion/Sad/sad_03.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Scared",
+    "label": "SCARED",
+    "class_idx": 31,
+    "video": "scared_01.mp4",
+    "rel_path": "custom_fsl/Emotion/Scared/scared_01.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Scared",
+    "label": "SCARED",
+    "class_idx": 31,
+    "video": "scared_02.mp4",
+    "rel_path": "custom_fsl/Emotion/Scared/scared_02.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Scared",
+    "label": "SCARED",
+    "class_idx": 31,
+    "video": "scared_03.mp4",
+    "rel_path": "custom_fsl/Emotion/Scared/scared_03.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Shy",
+    "label": "SHY",
+    "class_idx": 32,
+    "video": "shy_01.mp4",
+    "rel_path": "custom_fsl/Emotion/Shy/shy_01.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Shy",
+    "label": "SHY",
+    "class_idx": 32,
+    "video": "shy_02.mp4",
+    "rel_path": "custom_fsl/Emotion/Shy/shy_02.mp4"
+  },
+  {
+    "category": "Emotion",
+    "sign": "Shy",
+    "label": "SHY",
+    "class_idx": 32,
+    "video": "shy_03.mp4",
+    "rel_path": "custom_fsl/Emotion/Shy/shy_03.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Banana",
+    "label": "BANANA",
+    "class_idx": 1,
+    "video": "banana_01.mp4",
+    "rel_path": "custom_fsl/Fruits/Banana/banana_01.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Banana",
+    "label": "BANANA",
+    "class_idx": 1,
+    "video": "banana_02.mp4",
+    "rel_path": "custom_fsl/Fruits/Banana/banana_02.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Banana",
+    "label": "BANANA",
+    "class_idx": 1,
+    "video": "banana_03.mp4",
+    "rel_path": "custom_fsl/Fruits/Banana/banana_03.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Coconut",
+    "label": "COCONUT",
+    "class_idx": 5,
+    "video": "coconut_01.mp4",
+    "rel_path": "custom_fsl/Fruits/Coconut/coconut_01.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Coconut",
+    "label": "COCONUT",
+    "class_idx": 5,
+    "video": "coconut_02.mp4",
+    "rel_path": "custom_fsl/Fruits/Coconut/coconut_02.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Coconut",
+    "label": "COCONUT",
+    "class_idx": 5,
+    "video": "coconut_03.mp4",
+    "rel_path": "custom_fsl/Fruits/Coconut/coconut_03.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Mango",
+    "label": "MANGO",
+    "class_idx": 18,
+    "video": "mango_01.mp4",
+    "rel_path": "custom_fsl/Fruits/Mango/mango_01.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Mango",
+    "label": "MANGO",
+    "class_idx": 18,
+    "video": "mango_02.mp4",
+    "rel_path": "custom_fsl/Fruits/Mango/mango_02.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Pineapple",
+    "label": "PINEAPPLE",
+    "class_idx": 24,
+    "video": "pineapple_01.mp4",
+    "rel_path": "custom_fsl/Fruits/Pineapple/pineapple_01.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Pineapple",
+    "label": "PINEAPPLE",
+    "class_idx": 24,
+    "video": "pineapple_02.mp4",
+    "rel_path": "custom_fsl/Fruits/Pineapple/pineapple_02.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Pineapple",
+    "label": "PINEAPPLE",
+    "class_idx": 24,
+    "video": "pineapple_03.mp4",
+    "rel_path": "custom_fsl/Fruits/Pineapple/pineapple_03.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Watermelon",
+    "label": "WATERMELON",
+    "class_idx": 36,
+    "video": "watermelon_01.mp4",
+    "rel_path": "custom_fsl/Fruits/Watermelon/watermelon_01.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Watermelon",
+    "label": "WATERMELON",
+    "class_idx": 36,
+    "video": "watermelon_02.mp4",
+    "rel_path": "custom_fsl/Fruits/Watermelon/watermelon_02.mp4"
+  },
+  {
+    "category": "Fruits",
+    "sign": "Watermelon",
+    "label": "WATERMELON",
+    "class_idx": 36,
+    "video": "watermelon_03.mp4",
+    "rel_path": "custom_fsl/Fruits/Watermelon/watermelon_03.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Chef",
+    "label": "CHEF",
+    "class_idx": 4,
+    "video": "Chef_01.mp4",
+    "rel_path": "custom_fsl/Profession/Chef/Chef_01.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Chef",
+    "label": "CHEF",
+    "class_idx": 4,
+    "video": "Chef_02.mp4",
+    "rel_path": "custom_fsl/Profession/Chef/Chef_02.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Chef",
+    "label": "CHEF",
+    "class_idx": 4,
+    "video": "Chef_03.mp4",
+    "rel_path": "custom_fsl/Profession/Chef/Chef_03.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Doctor",
+    "label": "DOCTOR",
+    "class_idx": 8,
+    "video": "Doctor_01.mp4",
+    "rel_path": "custom_fsl/Profession/Doctor/Doctor_01.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Doctor",
+    "label": "DOCTOR",
+    "class_idx": 8,
+    "video": "Doctor_02.mp4",
+    "rel_path": "custom_fsl/Profession/Doctor/Doctor_02.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Doctor",
+    "label": "DOCTOR",
+    "class_idx": 8,
+    "video": "Doctor_03.mp4",
+    "rel_path": "custom_fsl/Profession/Doctor/Doctor_03.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Engineer",
+    "label": "ENGINEER",
+    "class_idx": 11,
+    "video": "Engineer_01.mp4",
+    "rel_path": "custom_fsl/Profession/Engineer/Engineer_01.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Engineer",
+    "label": "ENGINEER",
+    "class_idx": 11,
+    "video": "Engineer_02.mp4",
+    "rel_path": "custom_fsl/Profession/Engineer/Engineer_02.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Engineer",
+    "label": "ENGINEER",
+    "class_idx": 11,
+    "video": "Engineer_03.mp4",
+    "rel_path": "custom_fsl/Profession/Engineer/Engineer_03.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Firefighter",
+    "label": "FIREFIGHTER",
+    "class_idx": 13,
+    "video": "Firefighter_01.mp4",
+    "rel_path": "custom_fsl/Profession/Firefighter/Firefighter_01.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Firefighter",
+    "label": "FIREFIGHTER",
+    "class_idx": 13,
+    "video": "Firefighter_02.mp4",
+    "rel_path": "custom_fsl/Profession/Firefighter/Firefighter_02.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Firefighter",
+    "label": "FIREFIGHTER",
+    "class_idx": 13,
+    "video": "Firefighter_03.mp4",
+    "rel_path": "custom_fsl/Profession/Firefighter/Firefighter_03.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Nurse",
+    "label": "NURSE",
+    "class_idx": 21,
+    "video": "Nurse_01.mp4",
+    "rel_path": "custom_fsl/Profession/Nurse/Nurse_01.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Nurse",
+    "label": "NURSE",
+    "class_idx": 21,
+    "video": "Nurse_02.mp4",
+    "rel_path": "custom_fsl/Profession/Nurse/Nurse_02.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Nurse",
+    "label": "NURSE",
+    "class_idx": 21,
+    "video": "Nurse_03.mp4",
+    "rel_path": "custom_fsl/Profession/Nurse/Nurse_03.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Plumber",
+    "label": "PLUMBER",
+    "class_idx": 25,
+    "video": "Plumber_01.mp4",
+    "rel_path": "custom_fsl/Profession/Plumber/Plumber_01.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Plumber",
+    "label": "PLUMBER",
+    "class_idx": 25,
+    "video": "Plumber_02.mp4",
+    "rel_path": "custom_fsl/Profession/Plumber/Plumber_02.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Plumber",
+    "label": "PLUMBER",
+    "class_idx": 25,
+    "video": "Plumber_03.mp4",
+    "rel_path": "custom_fsl/Profession/Plumber/Plumber_03.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Police",
+    "label": "POLICE",
+    "class_idx": 26,
+    "video": "Police_01.mp4",
+    "rel_path": "custom_fsl/Profession/Police/Police_01.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Police",
+    "label": "POLICE",
+    "class_idx": 26,
+    "video": "Police_02.mp4",
+    "rel_path": "custom_fsl/Profession/Police/Police_02.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Police",
+    "label": "POLICE",
+    "class_idx": 26,
+    "video": "Police_03.mp4",
+    "rel_path": "custom_fsl/Profession/Police/Police_03.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Principal",
+    "label": "PRINCIPAL",
+    "class_idx": 28,
+    "video": "Principal_01.mp4",
+    "rel_path": "custom_fsl/Profession/Principal/Principal_01.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Principal",
+    "label": "PRINCIPAL",
+    "class_idx": 28,
+    "video": "Principal_02.mp4",
+    "rel_path": "custom_fsl/Profession/Principal/Principal_02.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Principal",
+    "label": "PRINCIPAL",
+    "class_idx": 28,
+    "video": "Principal_03.mp4",
+    "rel_path": "custom_fsl/Profession/Principal/Principal_03.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Programmer",
+    "label": "PROGRAMMER",
+    "class_idx": 29,
+    "video": "Programmer_01.mp4",
+    "rel_path": "custom_fsl/Profession/Programmer/Programmer_01.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Programmer",
+    "label": "PROGRAMMER",
+    "class_idx": 29,
+    "video": "Programmer_02.mp4",
+    "rel_path": "custom_fsl/Profession/Programmer/Programmer_02.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Programmer",
+    "label": "PROGRAMMER",
+    "class_idx": 29,
+    "video": "Programmer_03.mp4",
+    "rel_path": "custom_fsl/Profession/Programmer/Programmer_03.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Teacher",
+    "label": "TEACHER",
+    "class_idx": 33,
+    "video": "Teacher_01.mp4",
+    "rel_path": "custom_fsl/Profession/Teacher/Teacher_01.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Teacher",
+    "label": "TEACHER",
+    "class_idx": 33,
+    "video": "Teacher_02.mp4",
+    "rel_path": "custom_fsl/Profession/Teacher/Teacher_02.mp4"
+  },
+  {
+    "category": "Profession",
+    "sign": "Teacher",
+    "label": "TEACHER",
+    "class_idx": 33,
+    "video": "Teacher_03.mp4",
+    "rel_path": "custom_fsl/Profession/Teacher/Teacher_03.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Corn",
+    "label": "CORN",
+    "class_idx": 6,
+    "video": "corn_01.mp4",
+    "rel_path": "custom_fsl/Vegetables/Corn/corn_01.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Corn",
+    "label": "CORN",
+    "class_idx": 6,
+    "video": "corn_02.mp4",
+    "rel_path": "custom_fsl/Vegetables/Corn/corn_02.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Corn",
+    "label": "CORN",
+    "class_idx": 6,
+    "video": "corn_03.mp4",
+    "rel_path": "custom_fsl/Vegetables/Corn/corn_03.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Cucumber",
+    "label": "CUCUMBER",
+    "class_idx": 7,
+    "video": "cucumber_01.mp4",
+    "rel_path": "custom_fsl/Vegetables/Cucumber/cucumber_01.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Cucumber",
+    "label": "CUCUMBER",
+    "class_idx": 7,
+    "video": "cucumber_02.mp4",
+    "rel_path": "custom_fsl/Vegetables/Cucumber/cucumber_02.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Cucumber",
+    "label": "CUCUMBER",
+    "class_idx": 7,
+    "video": "cucumber_03.mp4",
+    "rel_path": "custom_fsl/Vegetables/Cucumber/cucumber_03.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Onions",
+    "label": "ONIONS",
+    "class_idx": 22,
+    "video": "onion_01.mp4",
+    "rel_path": "custom_fsl/Vegetables/Onions/onion_01.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Onions",
+    "label": "ONIONS",
+    "class_idx": 22,
+    "video": "onion_02.mp4",
+    "rel_path": "custom_fsl/Vegetables/Onions/onion_02.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Onions",
+    "label": "ONIONS",
+    "class_idx": 22,
+    "video": "onion_03.mp4",
+    "rel_path": "custom_fsl/Vegetables/Onions/onion_03.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Potato",
+    "label": "POTATO",
+    "class_idx": 27,
+    "video": "potato_01.mp4",
+    "rel_path": "custom_fsl/Vegetables/Potato/potato_01.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Potato",
+    "label": "POTATO",
+    "class_idx": 27,
+    "video": "potato_02.mp4",
+    "rel_path": "custom_fsl/Vegetables/Potato/potato_02.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Potato",
+    "label": "POTATO",
+    "class_idx": 27,
+    "video": "potato_03.mp4",
+    "rel_path": "custom_fsl/Vegetables/Potato/potato_03.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Tomato",
+    "label": "TOMATO",
+    "class_idx": 35,
+    "video": "tomato_01.mp4",
+    "rel_path": "custom_fsl/Vegetables/Tomato/tomato_01.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Tomato",
+    "label": "TOMATO",
+    "class_idx": 35,
+    "video": "tomato_02.mp4",
+    "rel_path": "custom_fsl/Vegetables/Tomato/tomato_02.mp4"
+  },
+  {
+    "category": "Vegetables",
+    "sign": "Tomato",
+    "label": "TOMATO",
+    "class_idx": 35,
+    "video": "tomato_03.mp4",
+    "rel_path": "custom_fsl/Vegetables/Tomato/tomato_03.mp4"
+  }
+]

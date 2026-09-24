@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.venv312/
+**/.venv/
+**/.venv312/
+.vscode/
+.env
+backend/temp/
+backend/models/
+dataset/raw/
+dataset/processed/
+dataset/landmarks/

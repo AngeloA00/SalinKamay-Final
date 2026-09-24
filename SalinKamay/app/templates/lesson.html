@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10b981">
+    <title>Lesson - SalinKamay</title>
+
+    <!-- pic ng tab natin salinkamay logo boompanes -->
+    <link rel="icon" type="image/png" href="/static/assets/images/SalinKamay_logo.png">
+    <link rel="apple-touch-icon" href="/static/assets/images/SalinKamay_logo.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/global.css?v=8">
+    <link rel="stylesheet" href="/static/css/lesson.css?v=5">
+    <link rel="stylesheet" href="/static/css/responsive.css?v=12">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <!-- Global Header Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/static/assets/images/SalinKamay_logo.png" alt="Logo" style="height: 50px; width: 50px; object-fit: contain; margin-right: 8px;">
+                <span class="nav-logo-text">SalinKamay</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/translate" class="nav-link">Translator</a></li>
+                <li><a href="/learning" class="nav-link active">Curriculum</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="app-content">
+        <div class="container">
+            <div class="page-header">
+                <button id="backToLearningBtn" class="btn btn-secondary btn-sm">
+                    <span>←</span> Back
+                </button>
+                <h1 id="lessonTitle" class="page-title">Lesson Title</h1>
+            </div>
+
+            <!-- ✅ BREADCRUMB (nasa ibaba ng page-header) -->
+            <nav id="breadcrumbNav" class="breadcrumb-nav" aria-label="Breadcrumb">
+                <a href="/learning" class="breadcrumb-link">Curriculum</a>
+                <span class="breadcrumb-sep" aria-hidden="true">›</span>
+                <a id="breadcrumbCategory" class="breadcrumb-link" href="#">Category</a>
+                <span class="breadcrumb-sep" aria-hidden="true">›</span>
+                <span id="breadcrumbLesson" class="breadcrumb-current" aria-current="page">Lesson</span>
+            </nav>
+
+            <!-- ✅ Divider line -->
+            <hr class="breadcrumb-divider">
+
+            <!-- Split Panel Workspace Grid -->
+            <div class="lesson-split-grid">
+                <!-- Left Column: Video Demonstration -->
+                <div class="lesson-col-left animate-slide-up">
+                    <div class="animation-display-card">
+                        <div class="video-container">
+                            <div id="videoPlaceholder" class="video-placeholder">
+                                <span class="placeholder-icon">🎥</span>
+                                <p>Loading the sign demonstration...</p>
+                            </div>
+                            <video id="lessonVideo" playsinline autoplay loop muted style="display: none;"></video>
+                            <img id="lessonImage" alt="Sign Language Demonstration" style="display: none; width: 100%; height: 100%; object-fit: contain; border-radius: var(--radius-lg);">
+
+                            <!-- Citation for FSL-105 Videos -->
+                            <div id="fsl105Citation" class="citation-text" style="display: none;">
+                                Demonstration by: Isaiah Jassen Tupal
+                            </div>
+                        </div>
+
+                        <div class="video-control-bar">
+                            <button id="replayBtn" class="btn btn-secondary btn-lg">
+                                <span class="icon">🔁</span> Replay the Demonstration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Performance Steps & Context -->
+                <div class="lesson-col-right animate-slide-up">
+                    <div class="details-card">
+                        <div class="details-section">
+                            <h3 class="section-subtitle">About This Sign</h3>
+                            <p id="lessonDescription" class="sign-description">Loading the description...</p>
+                        </div>
+
+                        <hr class="divider">
+
+                        <div class="details-section">
+                            <h3 class="section-subtitle">How to Perform</h3>
+                            <ol id="lessonSteps" class="steps-ordered-list">
+                                <!-- Loaded dynamically via JS -->
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Quick Navigation Controls -->
+                    <div class="quick-nav-actions" id="lastViewedContainer" style="display: none;">
+                        <div class="last-viewed-box">
+                            <span class="meta-label">Recently viewed sign:</span>
+                            <button id="recentLessonBtn" class="btn btn-text btn-sm">--</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Client Scripts -->
+    <script src="/static/js/indexeddb.js?v=13"></script>
+    <script src="/static/js/sw-register.js?v=4"></script>
+    <script src="/static/js/lesson.js?v=12"></script>
+</body>
+</html>

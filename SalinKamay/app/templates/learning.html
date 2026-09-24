@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10b981">
+    <title>Learn FSL - SalinKamay</title>
+    
+    <!-- pic ng tab natin salinkamay logo boompanes -->
+    <link rel="icon" type="image/png" href="/static/assets/images/SalinKamay_logo.png">
+    <link rel="apple-touch-icon" href="/static/assets/images/SalinKamay_logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/global.css?v=8">
+    <link rel="stylesheet" href="/static/css/learning.css?v=5">
+    <link rel="stylesheet" href="/static/css/responsive.css?v=12">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <!-- Global Header Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/static/assets/images/SalinKamay_logo.png" alt="Logo" style="height: 50px; width: 50px; object-fit: contain; margin-right: 8px;">
+                <span class="nav-logo-text">SalinKamay</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/translate" class="nav-link">Translator</a></li>
+                <li><a href="/learning" class="nav-link active">Curriculum</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="app-content">
+        <div class="container">
+            <!-- Page Title Section -->
+            <div class="page-header curriculum-header">
+                <div class="page-header-text">
+                    <h1 class="page-title">FSL Sign Curriculum</h1>
+                    <p class="page-subtitle">Learn words, numbers, phrases, and basic conversations in Filipino Sign Language (FSL).</p>
+                </div>
+            </div>
+
+            <!-- Search Bar inside workspace container -->
+            <div class="search-bar-container" id="searchContainer">
+                <div class="search-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search categories or signs...">
+                </div>
+            </div>
+
+            <!-- Categories Grid Section -->
+            <section id="categoriesSection" class="learning-section active">
+                <h2 class="section-title">Categories of FSL</h2>
+                <div id="categoryGrid" class="cards-grid">
+                    <!-- Loaded dynamically via JS -->
+                    <div class="loading-spinner"></div>
+                </div>
+            </section>
+
+            <!-- Lessons (Words) List Section -->
+            <section id="lessonsSection" class="learning-section">
+                <div class="section-header-nav">
+                    <button id="backToCategoriesBtn" class="btn btn-secondary btn-sm">
+                        <span>←</span> Back
+                    </button>
+                    <h2 id="currentCategoryTitle" class="section-category-title">Category Name</h2>
+                </div>
+                <div id="lessonGrid" class="cards-grid">
+                    <!-- Loaded dynamically via JS -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="landing-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 SalinKamay. Academic Capstone Project.</p>
+        </div>
+    </footer>
+
+    <!-- Client Scripts -->
+    <script src="/static/js/indexeddb.js?v=17"></script>
+    <script src="/static/js/seed.js?v=17"></script>
+    <script src="/static/js/sw-register.js?v=15"></script>
+    
+    <script src="/static/js/search.js?v=17"></script>
+    <script src="/static/js/learning.js?v=21"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10b981">
+    <title>SalinKamay - FSL Translator & Learning System</title>
+
+    <!-- pic ng tab natin salinkamay logo boompanes -->
+     <link rel="icon" type="image/png" href="/static/assets/images/SalinKamay_logo.png">
+<link rel="apple-touch-icon" href="/static/assets/images/SalinKamay_logo.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/global.css?v=8">
+    <link rel="stylesheet" href="/static/css/landing.css?v=5">
+    <link rel="stylesheet" href="/static/css/responsive.css?v=12">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/static/assets/images/SalinKamay_logo.png">
+</head>
+
+<body>
+    <!-- Global Header Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/static/assets/images/SalinKamay_logo.png" alt="Logo"
+                    style="height: 50px; width: 50px; object-fit: contain; margin-right: 8px;">
+                <span class="nav-logo-text">SalinKamay</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/translate" class="nav-link">Translator</a></li>
+                <li><a href="/learning" class="nav-link">Curriculum</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Landing Hero Section -->
+    <main class="app-content landing-page home-stage">
+        <div class="container">
+            <div class="landing-grid">
+                <!-- Left Column: Hero Copy -->
+                <div class="landing-hero-content animate-slide-up">
+                    <span class="app-tagline">AI-Powered Filipino Sign Language System</span>
+                    <h1 class="app-title">Breaking Communication Barriers</h1>
+
+                    <p class="app-description">
+                        SalinKamay translates Filipino Sign Language (FSL) into text and spoken voice in real-time,
+                        helping bridge the gap between the Deaf community and the hearing world. Start translating signs
+                        via your webcam or learn standard FSL gestures offline.
+                    </p>
+
+                    <div class="cta-buttons">
+                        <button id="translateBtn" class="btn btn-primary btn-lg">
+                            <span class="btn-icon">🔄</span> Translate FSL Sign 
+                        </button>
+                        <button id="learnBtn" class="btn btn-secondary btn-lg">
+                            <span class="btn-icon">📚</span> FSL Curriculum Catalog
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: BCES Logo Hero Preview Card -->
+                <div class="landing-hero-preview animate-fade-in">
+                    <div class="preview-interface-card bces-preview-card">
+                        <div class="preview-header">
+                            <div class="preview-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="preview-title">Bay Central Elementary School </span>
+                        </div>
+                        <div class="preview-viewport bces-viewport">
+                            <div class="tracking-grid-effect"></div>
+                            <div class="bces-logo-container">
+                                <div class="bces-glow-backdrop"></div>
+                                <img src="/static/assets/images/bces_logo.png" alt="BCES Logo" class="bces-logo-image">
+                            </div>
+                            <div class="preview-results-overlay">
+                                <div class="preview-badge">Educational Partner</div>
+                                <div class="preview-output-text">BCES Special Education</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="landing-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 SalinKamay. Academic Capstone Project.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/static/js/sw-register.js"></script>
+    <script src="/static/js/indexeddb.js"></script>
+    <script src="/static/js/seed.js"></script>
+    <script src="/static/js/app.js"></script>
+    <!-- PWA Install Banner -->
+    <div id="pwaInstallModal" class="install-banner" style="display: none;">
+        <div class="banner-left">
+            <img src="/static/assets/images/SalinKamay_logo.png" alt="App Icon" class="banner-icon">
+            <div class="banner-text">
+                <h4>Install SalinKamay</h4>
+                <p>Add to home screen for offline access</p>
+            </div>
+        </div>
+        <div class="banner-actions">
+            <button id="cancelInstallBtn" class="btn-text">Not now</button>
+            <button id="confirmInstallBtn" class="btn-solid">Install</button>
+        </div>
+    </div>
+    
+    <style>
+        .install-banner {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 900px;
+            background-color: #0f172a;
+            border-radius: 12px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .banner-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .banner-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            object-fit: cover;
+            background-color: #ffffff;
+            padding: 2px;
+        }
+        .banner-text h4 {
+            color: #ffffff;
+            margin: 0 0 4px 0;
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: left;
+        }
+        .banner-text p {
+            color: #94a3b8;
+            margin: 0;
+            font-size: 0.8rem;
+            text-align: left;
+        }
+        .banner-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .btn-text {
+            background: #334155;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.2s ease;
+        }
+        .btn-text:hover { background: #475569; }
+        .btn-solid {
+            background: #6366f1;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.2s ease;
+        }
+        .btn-solid:hover { background: #4f46e5; }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .install-banner {
+                flex-direction: column;
+                gap: 12px;
+                padding: 14px;
+                width: calc(100% - 24px);
+                max-width: none;
+                bottom: 12px;
+                border-radius: 14px;
+            }
+            .banner-left {
+                width: 100%;
+                gap: 12px;
+                align-items: flex-start;
+            }
+            .banner-icon {
+                width: 42px;
+                height: 42px;
+                flex: 0 0 42px;
+            }
+            .banner-text {
+                min-width: 0;
+            }
+            .banner-text h4 {
+                font-size: 0.95rem;
+            }
+            .banner-text p {
+                font-size: 0.75rem;
+                line-height: 1.35;
+            }
+            .banner-actions {
+                width: 100%;
+                gap: 10px;
+            }
+            .banner-actions button {
+                flex: 1;
+                min-width: 0;
+                padding: 9px 10px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .install-banner {
+                padding: 12px;
+            }
+            .banner-text h4 {
+                font-size: 0.9rem;
+            }
+            .banner-text p {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</body>
+
+</html>

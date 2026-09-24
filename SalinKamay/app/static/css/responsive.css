@@ -1,0 +1,670 @@
+/* Responsive Media Breakpoints for SalinKamay Proper Web Layout */
+
+/* Large Screens & Desktops */
+@media (min-width: 992px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .home-stage {
+        height: calc(100vh - 148px);
+        min-height: 0;
+        padding: 24px 0 28px;
+        overflow: hidden;
+    }
+
+    .translator-stage {
+        height: calc(100vh - 76px - 69px);
+        padding: 24px 0 28px;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .translator-stage > .container {
+        height: 100%;
+        min-height: 0;
+        overflow: visible;
+    }
+
+    .translator-stage .translation-pane.active {
+        height: calc(100% - 58px);
+        overflow: visible;
+    }
+
+    .translator-stage .translate-split-grid {
+        height: 100%;
+        max-height: none;
+    }
+}
+
+/* Medium Screens & Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+    .app-title {
+        font-size: 2.75rem;
+    }
+
+    .landing-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+    }
+
+    .translate-split-grid {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 24px;
+    }
+
+    .lesson-split-grid {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 24px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+    }
+
+    .app-content {
+        padding-top: 36px;
+    }
+
+    /* Navbar — box style pa rin sa tablet */
+    .nav-container {
+        height: 72px;
+        padding: 0 16px;
+    }
+
+    .nav-logo {
+        font-size: 1.25rem;
+    }
+
+    .nav-logo img {
+        height: 44px !important;
+        width: 44px !important;
+    }
+
+    .nav-menu {
+        gap: 8px;
+    }
+
+    .nav-link {
+        padding: 8px 14px;
+        font-size: 0.875rem;
+        border-width: 2px;
+    }
+}
+
+/* Small Screens & Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+    html {
+        font-size: 15px;
+    }
+
+    body {
+        padding-top: 0;
+        font-size: 0.95rem;
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0;
+    }
+
+    /* ✅ MOBILE NAVBAR — TAB LAYOUT NA MAY BOX
+       Logo sa taas (centered), nav links sa ibaba (rectangle box) */
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        min-height: 0;
+        padding: 12px 12px 14px;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    /* ✅ Logo — icon lang (itago yung text) */
+    .nav-logo {
+        font-size: 1.15rem;
+        gap: 6px;
+        flex-shrink: 0;
+    }
+
+    .nav-logo img {
+        height: 44px !important;
+        width: 44px !important;
+        margin-right: 0 !important;
+    }
+
+    .nav-logo-text {
+        display: none;
+    }
+
+    /* ✅ Nav menu — horizontal tabs na may box */
+    .nav-menu {
+        width: 100%;
+        justify-content: center;
+        gap: 6px;
+        padding: 0;
+        border-top: none;
+        flex-wrap: nowrap;
+    }
+
+    /* ✅ Nav links — MAY BOX pa rin */
+    .nav-link {
+        flex: 1;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--text);
+        background-color: var(--surface);
+        border: 2px solid var(--border);
+        border-radius: var(--radius-md);
+        box-shadow: 0 1px 3px rgba(24, 36, 43, 0.04);
+        gap: 0;
+        position: relative;
+        text-decoration: none;
+        letter-spacing: -0.01em;
+        min-width: 0;
+        white-space: nowrap;
+    }
+
+    .nav-link:hover {
+        color: var(--primary-hover);
+        background-color: var(--primary-light);
+        border-color: var(--primary);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(15, 159, 120, 0.15);
+    }
+
+    /* ✅ Active — solid green fill */
+    .nav-link.active {
+        color: #ffffff;
+        background: linear-gradient(135deg, var(--primary), #18b487);
+        border-color: var(--primary-hover);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.32);
+        font-weight: 700;
+    }
+
+    /* ✅ Underline sa active */
+    .nav-link.active::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 3px;
+        background-color: var(--primary);
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+    /* ✅ Hover underline sa non-active */
+    .nav-link:not(.active)::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        width: 60%;
+        height: 3px;
+        background-color: var(--primary);
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+    .nav-link:not(.active):hover::after {
+        transform: translateX(-50%) scaleX(1);
+    }
+
+    /* ✅ LANDING PAGE — i-scale down para fit sa mobile */
+    .landing-page {
+        min-height: auto;
+        padding: 20px 0;
+    }
+
+    .landing-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .landing-hero-content {
+        align-items: center;
+        width: 100%;
+    }
+
+    .app-tagline {
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        margin-bottom: 8px;
+    }
+
+    .app-title {
+        font-size: 1.85rem;
+        margin-bottom: 14px;
+        line-height: 1.15;
+        max-width: 100%;
+        letter-spacing: -0.01em;
+    }
+
+    .app-description {
+        font-size: 0.9rem;
+        margin-bottom: 24px;
+        line-height: 1.55;
+        max-width: 100%;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 12px 20px;
+    }
+
+    /* ✅ BCES preview card — i-scale down */
+    .landing-hero-preview {
+        width: 100%;
+    }
+
+    .preview-interface-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .preview-header {
+        padding: 10px 14px;
+    }
+
+    .preview-title {
+        font-size: 0.7rem;
+    }
+
+    .bces-viewport {
+        padding: 20px 16px 60px 16px;
+        min-height: 220px;
+    }
+
+    .bces-logo-image {
+        max-width: 140px;
+        max-height: 140px;
+    }
+
+    .bces-glow-backdrop {
+        width: 220px;
+        height: 220px;
+    }
+
+    .preview-results-overlay {
+        padding: 10px 14px;
+    }
+
+    .preview-output-text {
+        font-size: 1rem;
+    }
+
+    .preview-badge {
+        font-size: 0.65rem;
+    }
+
+    /* Other grids */
+    .translate-split-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .app-content {
+        padding: 24px 0 40px;
+    }
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .lesson-split-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 16px;
+    }
+
+    .card {
+        height: 140px;
+    }
+
+    .page-title {
+        font-size: 1.35rem;
+    }
+
+    .section-header-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .result-card, .input-card, .animation-card, .details-card {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .prediction-text {
+        font-size: 1.75rem;
+        overflow-wrap: anywhere;
+    }
+
+    .input-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .animation-actions {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .animation-actions .btn {
+        width: 100%;
+    }
+
+    .search-bar-container {
+        margin-bottom: 24px;
+    }
+
+    .page-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .curriculum-header {
+        align-items: center;
+        text-align: center;
+    }
+
+    .curriculum-header .page-header-text {
+        width: 100%;
+    }
+}
+
+/* Extra Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    /* ✅ Navbar — mas compact pero may box */
+    .nav-container {
+        padding: 10px 10px 12px;
+        gap: 8px;
+    }
+
+    .nav-logo {
+        font-size: 1rem;
+    }
+
+    .nav-logo img {
+        height: 40px !important;
+        width: 40px !important;
+    }
+
+    .nav-menu {
+        gap: 5px;
+    }
+
+    .nav-link {
+        padding: 7px 8px;
+        font-size: 0.68rem;
+        border-width: 1.5px;
+    }
+
+    .nav-link.active::after,
+    .nav-link:not(.active)::after {
+        bottom: -5px;
+        height: 2px;
+    }
+
+    /* ✅ Landing page — mas maliit */
+    .app-title {
+        font-size: 1.55rem;
+        margin-bottom: 12px;
+    }
+
+    .app-tagline {
+        font-size: 0.65rem;
+    }
+
+    .app-description {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .cta-buttons .btn {
+        font-size: 0.9rem;
+        padding: 11px 18px;
+    }
+
+    .bces-logo-image {
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    .bces-glow-backdrop {
+        width: 180px;
+        height: 180px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    .card {
+        height: 130px;
+    }
+
+    .btn,
+    .btn-lg {
+        font-size: 0.9rem;
+        padding: 11px 18px;
+    }
+}
+
+/* Very Small Phones (max-width: 380px) */
+@media (max-width: 380px) {
+    html {
+        font-size: 13px;
+    }
+
+    /* ✅ Navbar — pinaka-compact, box pa rin */
+    .nav-container {
+        padding: 8px 8px 10px;
+        gap: 6px;
+    }
+
+    .nav-logo img {
+        height: 36px !important;
+        width: 36px !important;
+    }
+
+    .nav-menu {
+        gap: 4px;
+    }
+
+    .nav-link {
+        padding: 6px 5px;
+        font-size: 0.6rem;
+        border-width: 1.5px;
+        border-radius: var(--radius-sm);
+        letter-spacing: -0.02em;
+    }
+
+    .nav-link.active::after,
+    .nav-link:not(.active)::after {
+        bottom: -4px;
+        height: 2px;
+    }
+
+    /* ✅ Landing page — pinaka-compact */
+    .app-title {
+        font-size: 1.35rem;
+        margin-bottom: 10px;
+    }
+
+    .app-tagline {
+        font-size: 0.6rem;
+        letter-spacing: 0.05em;
+    }
+
+    .app-description {
+        font-size: 0.8rem;
+        margin-bottom: 18px;
+        line-height: 1.5;
+    }
+
+    .cta-buttons {
+        gap: 8px;
+    }
+
+    .cta-buttons .btn {
+        font-size: 0.85rem;
+        padding: 10px 14px;
+    }
+
+    .bces-logo-image {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .bces-glow-backdrop {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bces-viewport {
+        padding: 16px 12px 50px 12px;
+        min-height: 180px;
+    }
+
+    .preview-output-text {
+        font-size: 0.9rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .btn,
+    .btn-lg {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+/* ✅ Very very small phones (max-width: 320px) — iPhone SE 1st gen */
+@media (max-width: 320px) {
+    html {
+        font-size: 12px;
+    }
+
+    .nav-container {
+        padding: 6px 6px 8px;
+        gap: 5px;
+    }
+
+    .nav-logo img {
+        height: 32px !important;
+        width: 32px !important;
+    }
+
+    .nav-menu {
+        gap: 3px;
+    }
+
+    .nav-link {
+        padding: 5px 4px;
+        font-size: 0.55rem;
+        border-width: 1px;
+        border-radius: 4px;
+    }
+
+    .nav-link.active::after,
+    .nav-link:not(.active)::after {
+        bottom: -3px;
+        height: 2px;
+    }
+
+    .app-title {
+        font-size: 1.2rem;
+    }
+
+    .app-tagline {
+        font-size: 0.55rem;
+    }
+
+    .app-description {
+        font-size: 0.75rem;
+    }
+
+    .cta-buttons .btn {
+        font-size: 0.8rem;
+        padding: 9px 12px;
+    }
+
+    .bces-logo-image {
+        max-width: 90px;
+        max-height: 90px;
+    }
+
+    .bces-glow-backdrop {
+        width: 130px;
+        height: 130px;
+    }
+
+    .bces-viewport {
+        padding: 14px 10px 44px 10px;
+        min-height: 160px;
+    }
+
+    .preview-output-text {
+        font-size: 0.8rem;
+    }
+
+    .preview-badge {
+        font-size: 0.6rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

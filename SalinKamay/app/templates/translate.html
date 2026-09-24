@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10b981">
+    <title>Translate - SalinKamay</title>
+
+    <!-- pic ng tab natin salinkamay logo boompanes -->
+    <link rel="icon" type="image/png" href="/static/assets/images/SalinKamay_logo.png">
+    <link rel="apple-touch-icon" href="/static/assets/images/SalinKamay_logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/global.css?v=8">
+    <link rel="stylesheet" href="/static/css/translate.css?v=10">
+    <link rel="stylesheet" href="/static/css/responsive.css?v=12">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+    <!-- Global Header Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/static/assets/images/SalinKamay_logo.png" alt="Logo"
+                    style="height: 50px; width: 50px; object-fit: contain; margin-right: 8px;">
+                <span class="nav-logo-text">SalinKamay</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/translate" class="nav-link active">Translator</a></li>
+                <li><a href="/learning" class="nav-link">Curriculum</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ✅ PAGE INFO BUTTON (nasa labas ng main — upper-right ng viewport) -->
+    <div class="page-info-wrap" id="pageInfoWrap">
+        <button type="button" class="page-info-btn" id="pageInfoBtn" aria-label="Camera, Mic and Privacy info">
+            <span aria-hidden="true">i</span>
+        </button>
+        <span class="page-info-tooltip" id="pageInfoTooltip">Camera &amp; Privacy</span>
+    </div>
+
+    <main class="app-content translator-stage">
+        <div class="container">
+            <!-- Main Segmented Control: FSL vs Hearing -->
+            <div class="segment-container">
+                <div class="segmented-control">
+                    <button id="fslTab" class="segment-btn active">FSL User (Sign to Text)</button>
+                    <button id="hearingTab" class="segment-btn">Hearing User (Text to Sign)</button>
+                </div>
+            </div>
+
+            <!-- FSL User Pane: Sign-to-Text & Speech -->
+            <section id="fslView" class="translation-pane active">
+                <div class="translate-split-grid">
+                    <!-- Left Column: Camera and settings -->
+                    <div class="translate-col-left">
+                        <!-- Mode Segmented Control: Alphabet vs Phrase -->
+                        <div class="detection-mode-container">
+                            <span class="mode-label">Detection Mode:</span>
+                            <div class="segmented-control small">
+                                <button id="modeAlphabet" class="segment-btn active">Alphabet</button>
+                                <button id="modePhrase" class="segment-btn">Phrase/Words</button>
+                            </div>
+                        </div>
+
+                        <!-- Camera Preview Card -->
+                        <div class="camera-card animate-slide-up">
+                            <div class="camera-wrapper">
+                                <video id="video" autoplay playsinline muted></video>
+                                <canvas id="canvas"></canvas>
+
+                                <div id="cameraStatus" class="camera-status">
+                                    <span class="status-dot pulse"></span> Connecting Camera...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: AI Output Display -->
+                    <div class="translate-col-right">
+                        <div class="result-card animate-slide-up">
+                            <div class="result-header">
+                                <span class="result-title">Detected Output</span>
+                                <span id="confidenceValue" class="confidence-badge">Confidence: --%</span>
+                            </div>
+                            <div class="result-body">
+                                <h2 id="outputText" class="prediction-text">Align hand to begin...</h2>
+                                <p class="prediction-hint">Make sure your hand is fully visible within the camera frame
+                                    under proper lighting.</p>
+                            </div>
+                            <div class="result-footer">
+                                <button id="restartBufferBtn" class="btn btn-secondary"
+                                    title="Restart gesture recognition buffer" style="display: none;">
+                                    <span class="icon">🔄</span> Restart Buffer
+                                </button>
+                                <button id="speakBtn" class="btn btn-primary" disabled>
+                                    <span class="icon">🔊</span> Pronounce (Text-to-Speech)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hearing User Pane: Text/Speech-to-Sign -->
+            <section id="hearingView" class="translation-pane">
+                <div class="translate-split-grid">
+                    <!-- Left Column: Text & Audio inputs -->
+                    <div class="translate-col-left">
+                        <div class="input-card animate-slide-up">
+                            <h3 class="card-title">Enter Translation Query</h3>
+                            <p class="card-subtitle-desc">Type words or speak into your microphone to convert speech
+                                into Filipino Sign Language.</p>
+
+                            <div class="input-wrapper">
+                                <div class="translation-input-container">
+                                    <input type="text" id="translateInput" class="form-input"
+                                        placeholder="Type or choose a word or phrase..." autocomplete="off">
+                                    <div id="translationSuggestions" class="translation-suggestions" role="listbox"
+                                        aria-label="Available translation words and phrases" hidden></div>
+                                </div>
+
+                                <div class="input-actions">
+                                    <button id="voiceRecBtn" class="btn btn-secondary"
+                                        aria-label="Start voice recognition">
+                                        <span class="icon">🎤</span> Voice Input
+                                    </button>
+                                    <button id="textTranslateBtn" class="btn btn-primary">
+                                        Translate to Sign
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Animation Display Card -->
+                    <div class="translate-col-right">
+                        <div class="animation-card animate-slide-up">
+                            <h3 class="card-title">FSL Demonstration</h3>
+                            <div class="animation-player-wrapper">
+                                <div id="signAnimationBox" class="animation-box">
+                                    <div class="animation-placeholder">
+                                        <span class="placeholder-icon">🧏</span>
+                                        <p>FSL Sign Video/Animation will play here</p>
+                                    </div>
+                                    <video id="animationVideo" playsinline style="display: none;"></video>
+                                </div>
+                            </div>
+                            <div class="animation-actions" style="display: none;" id="animationActions">
+                                <div class="sign-info">
+                                    <h4 id="signInfoTitle" class="sign-title">--</h4>
+                                    <p id="signInfoDesc" class="sign-desc">--</p>
+                                </div>
+                                <button id="replayBtn" class="btn btn-secondary">
+                                    <span class="icon">🔁</span> Replay
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="landing-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 SalinKamay. Academic Capstone Project.</p>
+        </div>
+    </footer>
+
+    <!-- MediaPipe Hands CDN Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+
+    <!-- Client Scripts -->
+    <script src="/static/js/indexeddb.js?v=13"></script>
+    <script src="/static/js/seed.js?v=12"></script>
+    <script src="/static/js/sw-register.js?v=4"></script>
+
+    <script src="/static/js/speech.js?v=14"></script>
+    <script src="/static/js/predictor.js?v=12"></script>
+    <script src="/static/js/camera.js?v=16"></script>
+    <script src="/static/js/translate.js?v=32"></script>
+</body>
+
+</html>
